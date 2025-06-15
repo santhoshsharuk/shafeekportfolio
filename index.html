@@ -1,0 +1,1394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ahmad Shafiq | Educator • AI Innovator • SaaS Builder</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'sans': ['Inter', 'sans-serif'],
+            'display': ['Clash Display', 'sans-serif'],
+            'mono': ['JetBrains Mono', 'monospace']
+          },
+          animation: {
+            'float': 'float 6s ease-in-out infinite',
+            'reveal': 'reveal 1.5s forwards',
+            'pulse-glow': 'pulseGlow 3s infinite',
+            'slide-up': 'slideUp 0.8s forwards',
+            'fade-in': 'fadeIn 1.2s forwards',
+            'spin-slow': 'spin 20s linear infinite',
+            'gradient': 'gradient 15s ease infinite',
+            'typewriter': 'typewriter 4s steps(40) 1s forwards',
+            'blink': 'blink 1s infinite',
+            'scale-in': 'scaleIn 0.7s cubic-bezier(0.17, 0.67, 0.3, 0.96) forwards',
+            'glow-pulse': 'glowPulse 2s ease-in-out infinite',
+            'float-glow': 'floatGlow 8s ease-in-out infinite'
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0) rotate(0deg)' },
+              '50%': { transform: 'translateY(-20px) rotate(5deg)' }
+            },
+            reveal: {
+              '0%': { opacity: 0, transform: 'translateY(30px)' },
+              '100%': { opacity: 1, transform: 'translateY(0)' }
+            },
+            pulseGlow: {
+              '0%, 100%': { boxShadow: '0 0 30px rgba(59, 130, 246, 0.4)' },
+              '50%': { boxShadow: '0 0 50px rgba(59, 130, 246, 0.8)' }
+            },
+            slideUp: {
+              '0%': { transform: 'translateY(100%)', opacity: 0 },
+              '100%': { transform: 'translateY(0)', opacity: 1 }
+            },
+            fadeIn: {
+              '0%': { opacity: 0 },
+              '100%': { opacity: 1 }
+            },
+            gradient: {
+              '0%, 100%': { backgroundPosition: '0% 50%' },
+              '50%': { backgroundPosition: '100% 50%' }
+            },
+            typewriter: {
+              '0%': { width: '0' },
+              '100%': { width: '100%' }
+            },
+            blink: {
+              '0%, 50%': { borderColor: 'transparent' },
+              '51%, 100%': { borderColor: '#3b82f6' }
+            },
+            scaleIn: {
+              '0%': { transform: 'scale(0)', opacity: 0 },
+              '100%': { transform: 'scale(1)', opacity: 1 }
+            },
+            glowPulse: {
+              '0%, 100%': { boxShadow: '0 0 15px rgba(59, 130, 246, 0.3)' },
+              '50%': { boxShadow: '0 0 30px rgba(79, 70, 229, 0.6)' }
+            },
+            floatGlow: {
+              '0%, 100%': { 
+                transform: 'translateY(0) rotate(0deg)', 
+                boxShadow: '0 0 15px rgba(59, 130, 246, 0.3)' 
+              },
+              '50%': { 
+                transform: 'translateY(-15px) rotate(3deg)', 
+                boxShadow: '0 0 30px rgba(79, 70, 229, 0.6)' 
+              }
+            }
+          },
+          backgroundImage: {
+            'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+            'glass-gradient': 'linear-gradient(135deg, rgba(255,255,255,0.4), rgba(255,255,255,0.1))',
+            'glass-gradient-hover': 'linear-gradient(135deg, rgba(255,255,255,0.5), rgba(255,255,255,0.2))'
+          },
+          boxShadow: {
+            'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.07)',
+            'glass-strong': '0 8px 32px 0 rgba(31, 38, 135, 0.15)',
+            'neon-blue': '0 0 15px rgba(59, 130, 246, 0.5), 0 0 30px rgba(59, 130, 246, 0.3)',
+            'neon-purple': '0 0 15px rgba(139, 92, 246, 0.5), 0 0 30px rgba(139, 92, 246, 0.3)',
+            'neon-cyan': '0 0 15px rgba(6, 182, 212, 0.5), 0 0 30px rgba(6, 182, 212, 0.3)'
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Import fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@200,400,700,500,600,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    * {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      background: #ffffff !important;
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+      color: #1f2937 !important;
+    }
+    
+    /* Enhanced Glass Morphism */
+    .glass {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+      transition: all 0.3s ease;
+    }
+    
+    .glass:hover {
+      background: rgba(255, 255, 255, 0.25);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+    }
+    
+    .glass-card {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+      transition: all 0.3s ease;
+    }
+    
+    .glass-card:hover {
+      background: rgba(255, 255, 255, 0.25);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1), 0 0 15px rgba(59, 130, 246, 0.3);
+    }
+    
+    /* Enhanced Gradients */
+    .text-gradient {
+      background: linear-gradient(135deg, #2563eb, #7c3aed, #0891b2);
+      background-size: 300% 300%;
+      animation: gradient 8s ease infinite;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      font-weight: 700;
+    }
+    
+    .text-gradient-gold {
+      background: linear-gradient(135deg, #d97706, #ea580c, #dc2626);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      font-weight: 600;
+    }
+    
+    /* Enhanced Text Styling */
+    .text-dark-force {
+      color: #111827 !important;
+    }
+    
+    .text-dark-80 {
+      color: rgba(31, 41, 55, 0.8) !important;
+    }
+    
+    /* Enhanced Hover Effects */
+    .hover-lift {
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .hover-lift:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1), 0 0 20px rgba(59, 130, 246, 0.3);
+    }
+    
+    /* Enhanced Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.05);
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+      border-radius: 4px;
+    }
+    
+    /* Enhanced Particles */
+    .particle {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(59, 130, 246, 0.2);
+      animation: float 8s ease-in-out infinite;
+      box-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
+    }
+    
+    /* Enhanced Navigation Dots */
+    .nav-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .nav-dot.active {
+      background: #3b82f6;
+      transform: scale(1.2);
+      box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+    }
+    
+    /* Enhanced CTA Buttons */
+    .cta-primary {
+      background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+      transition: all 0.3s ease;
+      color: #ffffff !important;
+      font-weight: 600;
+      border: none;
+      box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
+    }
+    
+    .cta-primary:hover {
+      background: linear-gradient(135deg, #2563eb, #7c3aed);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3), 0 0 20px rgba(59, 130, 246, 0.5);
+    }
+    
+    .cta-secondary {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      transition: all 0.3s ease;
+      color: #3b82f6 !important;
+      font-weight: 600;
+      box-shadow: 0 0 10px rgba(59, 130, 246, 0.1);
+    }
+    
+    .cta-secondary:hover {
+      background: rgba(59, 130, 246, 0.1);
+      border-color: #3b82f6;
+      transform: translateY(-2px);
+      color: #2563eb !important;
+      box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
+    }
+    
+    /* Enhanced Project Cards */
+    .project-card {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+      transition: all 0.3s ease;
+    }
+    
+    .project-card:hover {
+      background: rgba(255, 255, 255, 0.25);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08), 0 0 20px rgba(59, 130, 246, 0.3);
+    }
+    
+    /* Enhanced Typewriter Effect */
+    .typewriter {
+      overflow: hidden;
+      border-right: 2px solid #3b82f6;
+      white-space: nowrap;
+      animation: typewriter 4s steps(40) 1s forwards, blink 1s infinite;
+      color: #374151 !important;
+    }
+    
+    /* Glow Border Effect */
+    .glow-border {
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
+      transition: all 0.3s ease;
+    }
+    
+    .glow-border:hover {
+      border: 1px solid rgba(59, 130, 246, 0.5);
+      box-shadow: 0 0 25px rgba(59, 130, 246, 0.5);
+    }
+    
+    /* Enhanced Floating Animation Delays */
+    .float-delay-1 { animation-delay: 0s; animation-duration: 8s; }
+    .float-delay-2 { animation-delay: 2s; animation-duration: 10s; }
+    .float-delay-3 { animation-delay: 4s; animation-duration: 12s; }
+    .float-delay-4 { animation-delay: 6s; animation-duration: 9s; }
+    
+    /* Breathe Effect */
+    @keyframes breathe {
+      0%, 100% { 
+        transform: scale(1) rotate(0deg);
+        opacity: 0.4;
+      }
+      50% { 
+        transform: scale(1.1) rotate(180deg);
+        opacity: 0.6;
+      }
+    }
+    
+    /* Enhanced Navigation */
+    nav a {
+      color: rgba(31, 41, 55, 0.7) !important;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    
+    nav a:hover {
+      color: #3b82f6 !important;
+    }
+    
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+      transition: width 0.3s ease;
+      box-shadow: 0 0 8px rgba(59, 130, 246, 0.5);
+    }
+    
+    nav a:hover::after {
+      width: 100%;
+    }
+    
+    /* Enhanced Tags */
+    .tag-light {
+      background: rgba(59, 130, 246, 0.1);
+      color: #1e40af;
+      border: 1px solid rgba(59, 130, 246, 0.2);
+      box-shadow: 0 0 8px rgba(59, 130, 246, 0.1);
+      transition: all 0.3s ease;
+    }
+    
+    .tag-light:hover {
+      background: rgba(59, 130, 246, 0.15);
+      box-shadow: 0 0 12px rgba(59, 130, 246, 0.2);
+    }
+    
+    /* Enhanced Contact Cards */
+    .contact-card {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+      transition: all 0.3s ease;
+    }
+    
+    .contact-card:hover {
+      background: rgba(255, 255, 255, 0.25);
+      border-color: rgba(59, 130, 246, 0.3);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1), 0 0 20px rgba(59, 130, 246, 0.3);
+    }
+    
+    /* Enhanced Profile Image Container */
+    .profile-container {
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(139, 92, 246, 0.2));
+      border: 2px solid rgba(59, 130, 246, 0.3);
+      box-shadow: 0 0 25px rgba(59, 130, 246, 0.4);
+      transition: all 0.3s ease;
+    }
+    
+    .profile-container:hover {
+      box-shadow: 0 0 35px rgba(59, 130, 246, 0.6);
+      border: 2px solid rgba(59, 130, 246, 0.5);
+    }
+    
+    /* Enhanced Navigation Background */
+    .nav-glass {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(59, 130, 246, 0.1);
+      box-shadow: 0 4px 15px rgba(31, 38, 135, 0.07);
+    }
+    
+    /* New Glass Card Variations */
+    .glass-card-blue {
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(59, 130, 246, 0.05));
+      border: 1px solid rgba(59, 130, 246, 0.2);
+      box-shadow: 0 8px 32px rgba(59, 130, 246, 0.1);
+    }
+    
+    .glass-card-purple {
+      background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(139, 92, 246, 0.05));
+      border: 1px solid rgba(139, 92, 246, 0.2);
+      box-shadow: 0 8px 32px rgba(139, 92, 246, 0.1);
+    }
+    
+    .glass-card-cyan {
+      background: linear-gradient(135deg, rgba(6, 182, 212, 0.1), rgba(6, 182, 212, 0.05));
+      border: 1px solid rgba(6, 182, 212, 0.2);
+      box-shadow: 0 8px 32px rgba(6, 182, 212, 0.1);
+    }
+    
+    /* New Glowing Icons */
+    .icon-glow-blue {
+      color: #3b82f6;
+      filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.5));
+      transition: all 0.3s ease;
+    }
+    
+    .icon-glow-blue:hover {
+      color: #2563eb;
+      filter: drop-shadow(0 0 12px rgba(59, 130, 246, 0.7));
+    }
+    
+    .icon-glow-purple {
+      color: #8b5cf6;
+      filter: drop-shadow(0 0 8px rgba(139, 92, 246, 0.5));
+      transition: all 0.3s ease;
+    }
+    
+    .icon-glow-purple:hover {
+      color: #7c3aed;
+      filter: drop-shadow(0 0 12px rgba(139, 92, 246, 0.7));
+    }
+    
+    .icon-glow-cyan {
+      color: #06b6d4;
+      filter: drop-shadow(0 0 8px rgba(6, 182, 212, 0.5));
+      transition: all 0.3s ease;
+    }
+    
+    .icon-glow-cyan:hover {
+      color: #0891b2;
+      filter: drop-shadow(0 0 12px rgba(6, 182, 212, 0.7));
+    }
+    /* Additional Enhanced Glassmorphism Effects */
+
+    /* Glass Container with Dynamic Glow */
+    .glass-dynamic {
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      box-shadow: 0 8px 32px rgba(31, 38, 135, 0.05);
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+    }
+
+    .glass-dynamic::before {
+      content: '';
+      position: absolute;
+      inset: -1px;
+      background: linear-gradient(45deg, rgba(59, 130, 246, 0.3), rgba(139, 92, 246, 0.3), rgba(6, 182, 212, 0.3), rgba(59, 130, 246, 0.3));
+      background-size: 400% 400%;
+      z-index: -1;
+      border-radius: inherit;
+      animation: gradient 15s ease infinite;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+
+    .glass-dynamic:hover::before {
+      opacity: 1;
+    }
+
+    /* Glass Glow Border */
+    .glow-border-animation {
+      position: relative;
+      background: rgba(255, 255, 255, 0.1);
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .glow-border-animation::after {
+      content: '';
+      position: absolute;
+      inset: -5px;
+      background: conic-gradient(
+        from 0deg,
+        transparent 0%,
+        rgba(59, 130, 246, 0.8) 15%,
+        rgba(139, 92, 246, 0.8) 35%, 
+        rgba(6, 182, 212, 0.8) 65%,
+        rgba(59, 130, 246, 0.8) 85%,
+        transparent 100%
+      );
+      animation: rotate 8s linear infinite;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      z-index: -1;
+    }
+
+    .glow-border-animation:hover::after {
+      opacity: 0.5;
+    }
+
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    /* Prismatic Glass Effect */
+    .glass-prismatic {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .glass-prismatic::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.05) 40%,
+        rgba(255, 255, 255, 0.1) 50%,
+        rgba(255, 255, 255, 0.05) 60%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      transform: rotate(25deg);
+      transition: transform 0.8s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+      pointer-events: none;
+    }
+
+    .glass-prismatic:hover::before {
+      transform: rotate(25deg) translate(20%, 20%);
+    }
+
+    /* Frosted Glass with Highlight */
+    .glass-frost {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px) saturate(180%);
+      -webkit-backdrop-filter: blur(10px) saturate(180%);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 
+        0 4px 20px rgba(0, 0, 0, 0.05),
+        inset 0 2px 0 rgba(255, 255, 255, 0.1),
+        inset 0 -2px 0 rgba(0, 0, 0, 0.05);
+      transition: all 0.4s ease;
+    }
+
+    .glass-frost:hover {
+      background: rgba(255, 255, 255, 0.15);
+      box-shadow: 
+        0 8px 25px rgba(0, 0, 0, 0.08),
+        inset 0 2px 0 rgba(255, 255, 255, 0.2),
+        inset 0 -2px 0 rgba(0, 0, 0, 0.05),
+        0 0 20px rgba(59, 130, 246, 0.2);
+    }
+
+    /* Additional Animations */
+    @keyframes float-radial {
+      0%, 100% {
+        transform: translateY(0) rotate(0deg) scale(1);
+        opacity: 0.4;
+      }
+      33% {
+        transform: translateY(-15px) rotate(5deg) scale(1.05);
+        opacity: 0.6;
+      }
+      66% {
+        transform: translateY(10px) rotate(-3deg) scale(0.95);
+        opacity: 0.5;
+      }
+    }
+
+    .animate-float-radial {
+      animation: float-radial 10s ease-in-out infinite;
+    }
+
+    /* Enhanced button hover effects */
+    .btn-glow {
+      position: relative;
+      transition: all 0.4s ease;
+      z-index: 1;
+      overflow: hidden;
+    }
+
+    .btn-glow::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0) 100%);
+      transform: skewX(-25deg);
+      transition: all 0.7s ease;
+      z-index: -1;
+    }
+
+    .btn-glow:hover::before {
+      width: 150%;
+      left: -25%;
+    }
+
+    /* Page transition effect */
+    .page-transition-enter {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    .page-transition-enter-active {
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 0.5s, transform 0.5s;
+    }
+
+    /* Loading animation */
+    .loaded .animate-reveal {
+      animation: reveal 1.5s cubic-bezier(0.17, 0.67, 0.3, 0.96) forwards;
+    }
+  </style>
+</head>
+
+<body class="text-gray-800 min-h-screen relative">
+  <!-- Enhanced Animated Background with Glassmorphism -->
+  <div class="fixed inset-0 pointer-events-none overflow-hidden">
+    <!-- Geometric Floating Shapes -->
+    <div class="absolute inset-0">
+      <!-- Large Glowing Orbs -->
+      <div class="absolute w-96 h-96 bg-gradient-to-br from-blue-500/10 via-purple-500/5 to-transparent rounded-full blur-3xl top-[10%] left-[5%] animate-float float-delay-1 shadow-neon-blue"></div>
+      <div class="absolute w-80 h-80 bg-gradient-to-br from-purple-500/10 via-pink-500/5 to-transparent rounded-full blur-3xl bottom-[10%] right-[10%] animate-float float-delay-3 shadow-neon-purple"></div>
+      <div class="absolute w-64 h-64 bg-gradient-to-br from-cyan-500/10 via-blue-500/5 to-transparent rounded-full blur-2xl top-[50%] right-[20%] animate-float float-delay-2 shadow-neon-cyan"></div>
+      
+      <!-- Geometric Shapes with Enhanced Glow -->
+      <div class="absolute w-4 h-4 bg-gradient-to-br from-blue-400/30 to-blue-600/40 rotate-45 top-[25%] left-[15%] animate-float-glow float-delay-1"></div>
+      <div class="absolute w-3 h-3 bg-gradient-to-br from-purple-400/30 to-purple-600/40 rounded-full top-[70%] left-[80%] animate-float-glow float-delay-4"></div>
+      <div class="absolute w-6 h-6 bg-gradient-to-br from-cyan-400/25 to-cyan-600/35 top-[40%] left-[25%] animate-float-glow float-delay-2" style="clip-path: polygon(50% 0%, 0% 100%, 100% 100%)"></div>
+      <div class="absolute w-5 h-5 bg-gradient-to-br from-pink-400/30 to-pink-600/40 rotate-12 top-[60%] right-[30%] animate-float-glow float-delay-3"></div>
+      
+      <!-- Floating Dots with Enhanced Glow -->
+      <div class="absolute w-2 h-2 bg-blue-400/50 rounded-full top-[15%] right-[25%] animate-float-glow float-delay-1 shadow-lg shadow-blue-400/30"></div>
+      <div class="absolute w-1 h-1 bg-purple-400/60 rounded-full top-[85%] left-[40%] animate-float-glow float-delay-3 shadow-md shadow-purple-400/40"></div>
+      <div class="absolute w-3 h-3 bg-cyan-400/40 rounded-full top-[30%] right-[15%] animate-float-glow float-delay-2 shadow-lg shadow-cyan-400/30"></div>
+      <div class="absolute w-2 h-2 bg-pink-400/50 rounded-full bottom-[20%] left-[60%] animate-float-glow float-delay-4 shadow-lg shadow-pink-400/30"></div>
+      
+      <!-- Enhanced Connecting Lines with Glow -->
+      <svg class="absolute inset-0 w-full h-full opacity-20">
+        <defs>
+          <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.5" />
+            <stop offset="50%" style="stop-color:#8b5cf6;stop-opacity:0.3" />
+            <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:0.2" />
+          </linearGradient>
+          <filter id="glow">
+            <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+            <feMerge>
+              <feMergeNode in="coloredBlur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+        </defs>
+        <path d="M 100 200 Q 400 300 800 400" stroke="url(#lineGradient)" stroke-width="1.5" fill="none" class="animate-pulse" filter="url(#glow)" />
+        <path d="M 200 100 Q 600 250 900 300" stroke="url(#lineGradient)" stroke-width="1.5" fill="none" class="animate-pulse" style="animation-delay: 1s;" filter="url(#glow)" />
+        <path d="M 300 500 Q 500 150 700 450" stroke="url(#lineGradient)" stroke-width="1.5" fill="none" class="animate-pulse" style="animation-delay: 2s;" filter="url(#glow)" />
+      </svg>
+      
+      <!-- Enhanced Sparkles with Glow -->
+      <div class="absolute w-1 h-1 bg-white rounded-full top-[20%] left-[70%] animate-ping shadow-sm shadow-blue-400/50" style="animation-delay: 2s;"></div>
+      <div class="absolute w-1 h-1 bg-white rounded-full bottom-[30%] right-[40%] animate-ping shadow-sm shadow-purple-400/50" style="animation-delay: 4s;"></div>
+      <div class="absolute w-1 h-1 bg-white rounded-full top-[50%] left-[20%] animate-ping shadow-sm shadow-cyan-400/50" style="animation-delay: 6s;"></div>
+      <div class="absolute w-1 h-1 bg-white rounded-full bottom-[15%] left-[35%] animate-ping shadow-sm shadow-pink-400/50" style="animation-delay: 1s;"></div>
+      <div class="absolute w-1 h-1 bg-white rounded-full top-[40%] right-[25%] animate-ping shadow-sm shadow-blue-400/50" style="animation-delay: 3s;"></div>
+    </div>
+  </div>
+
+  <!-- Enhanced Navigation with Glass Effect -->
+  <nav class="fixed top-0 left-0 right-0 z-50 nav-glass shadow-glass">
+    <div class="max-w-7xl mx-auto px-6 py-4">
+      <div class="flex items-center justify-between">
+        <div class="font-display font-bold text-xl text-gradient shadow-sm">Ahmad Shafiq</div>
+        <div class="hidden md:flex space-x-8">
+          <a href="#hero" class="text-gray-600 hover:text-blue-600 transition-all">Home</a>
+          <a href="#about" class="text-gray-600 hover:text-blue-600 transition-all">About</a>
+          <a href="#z2learn" class="text-gray-600 hover:text-blue-600 transition-all">Z2Learn</a>
+          <a href="#z3connect" class="text-gray-600 hover:text-blue-600 transition-all">Z3Connect</a>
+          <a href="#projects" class="text-gray-600 hover:text-blue-600 transition-all">Projects</a>
+          <a href="#contact" class="text-gray-600 hover:text-blue-600 transition-all">Contact</a>
+        </div>
+        <button class="md:hidden text-gray-800 bg-white/30 p-2 rounded-lg backdrop-blur-lg border border-white/20 shadow-glass">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Enhanced Hero Section with Glassmorphism -->
+  <section id="hero" class="min-h-screen flex items-center justify-center relative px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="mb-8 opacity-0 animate-scale-in" style="animation-delay: 0.5s;">
+        <div class="w-40 h-40 mx-auto rounded-full profile-container p-1 animate-pulse-glow">
+          <div class="w-full h-full rounded-full overflow-hidden bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center shadow-neon-blue">
+            <!-- Replace with your actual image -->
+            <img 
+              src="image2.jpg" 
+              alt="Ahmad Shafiq Profile" 
+              class="w-full h-full object-cover rounded-full"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            />
+            <!-- Fallback icon (hidden by default, shows if image fails to load) -->
+            <i class="fas fa-user text-4xl text-white" style="display: none;"></i>
+          </div>
+        </div>
+      </div>
+      
+      
+      <!-- Enhanced Main Heading with Glow -->
+      <h1 class="font-display text-5xl md:text-7xl font-bold mb-6 opacity-0 animate-reveal text-gray-900 drop-shadow-md" style="animation-delay: 1s;">
+        <span class="text-gradient">Ahmad Shafiq</span>
+      </h1>
+      
+      <!-- Enhanced Typewriter Subtitle -->
+      <div class="text-xl md:text-2xl mb-4 h-8 opacity-0 animate-reveal" style="animation-delay: 1.5s;">
+        <span class="typewriter text-gray-700">Educator | AI Innovator | SaaS Builder</span>
+      </div>
+      
+      <!-- Enhanced Description -->
+      <p class="text-lg md:text-xl text-gray-600 mb-4 opacity-0 animate-reveal" style="animation-delay: 2s;">
+        Founder & CEO of Z2Learn and Z3Connector
+      </p>
+      
+      <p class="text-base md:text-lg text-gray-500 max-w-2xl mx-auto mb-12 opacity-0 animate-reveal" style="animation-delay: 2.5s;">
+        Building the future of education and intelligent business systems.
+      </p>
+      
+      <!-- Enhanced CTA Buttons with Glow -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center opacity-0 animate-reveal" style="animation-delay: 3s;">
+        <button class="cta-primary px-8 py-4 rounded-full font-semibold text-white shadow-neon-blue">
+          <i class="fas fa-rocket mr-2"></i>
+          Explore My Work
+        </button>
+        <button class="cta-secondary px-8 py-4 rounded-full font-semibold backdrop-blur-md shadow-glass">
+          <i class="fas fa-handshake mr-2"></i>
+          Let's Collaborate
+        </button>
+      </div>
+      
+      <!-- Enhanced Scroll Indicator with Glow -->
+      <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 animate-fade-in" style="animation-delay: 4s;">
+        <div class="w-6 h-10 border-2 border-blue-400/50 rounded-full flex justify-center shadow-neon-blue">
+          <div class="w-1 h-3 bg-blue-500 rounded-full mt-2 animate-bounce shadow-sm shadow-blue-400/70"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Enhanced About Section with Glassmorphism -->
+  <section id="about" class="py-20 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-4xl md:text-5xl font-display font-bold mb-6 text-gray-900">
+            <i class="fas fa-user-circle text-gradient mr-4 icon-glow-blue"></i>
+            About Me
+          </h2>
+          <div class="space-y-6 text-lg text-gray-700 leading-relaxed">
+            <p class="text-gray-700">
+              Hi, I'm <span class="text-gradient-gold font-semibold">Ahmad Shafiq</span> — a developer, educator, and founder with a mission to shape the future through EdTech and AI.
+            </p>
+            <p class="text-gray-700">
+              I lead <span class="text-blue-600 font-semibold icon-glow-blue">Z2Learn</span>, an EdTech platform that brings practical learning to life, and <span class="text-purple-600 font-semibold icon-glow-purple">Z3Connector</span>, a B2B SaaS engine creating advanced tools for businesses.
+            </p>
+            <p class="text-gray-700">
+              My work spans across intelligent learning platforms, CRM/ERP systems, and AI-powered video tools — all built to solve real-world problems at scale.
+            </p>
+          </div>
+        </div>
+        <div class="glass-card-blue rounded-2xl p-8 hover-lift backdrop-blur-lg shadow-neon-blue">
+          <div class="grid grid-cols-2 gap-6">
+            <div class="text-center">
+              <div class="text-3xl font-bold text-gradient shadow-sm">10+</div>
+              <div class="text-gray-600">Projects Built</div>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-bold text-gradient shadow-sm">5+</div>
+              <div class="text-gray-600">Years Experience</div>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-bold text-gradient shadow-sm">100+</div>
+              <div class="text-gray-600">Students Taught</div>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-bold text-gradient shadow-sm">3</div>
+              <div class="text-gray-600">Companies Founded</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Enhanced Z2Learn Section with Glassmorphism -->
+  <section id="z2learn" class="py-20 px-6">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl md:text-5xl font-display font-bold text-center mb-16 text-gray-900">
+        <i class="fas fa-graduation-cap text-gradient mr-4 icon-glow-blue"></i>
+        Z2Learn – The Future of Learning
+      </h2>
+      
+      <div class="grid lg:grid-cols-2 gap-12">
+        <div class="glass-card-purple rounded-2xl p-8 hover-lift backdrop-blur-lg shadow-neon-purple">
+          <h3 class="text-2xl font-bold mb-6 text-gradient">
+            <i class="fas fa-target mr-3 icon-glow-purple"></i>
+            Key Initiatives
+          </h3>
+          <ul class="space-y-4">
+            <li class="flex items-start text-gray-700">
+              <i class="fas fa-route text-blue-600 mr-3 mt-1 icon-glow-blue"></i>
+              <span>Roadmap & Curriculum Generator with AI</span>
+            </li>
+            <li class="flex items-start text-gray-700">
+              <i class="fas fa-robot text-purple-600 mr-3 mt-1 icon-glow-purple"></i>
+              <span>ZGPT: Personalized AI Tutor for Learners</span>
+            </li>
+            <li class="flex items-start text-gray-700">
+              <i class="fas fa-bolt text-yellow-600 mr-3 mt-1"></i>
+              <span>Flash Courses: Learn Web, App & AI Fast</span>
+            </li>
+            <li class="flex items-start text-gray-700">
+              <i class="fas fa-laptop-code text-green-600 mr-3 mt-1"></i>
+              <span>UI/UX, Web & App Dev, Software Bootcamps</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="glass-card-blue rounded-2xl p-8 hover-lift backdrop-blur-lg shadow-neon-blue">
+          <h3 class="text-2xl font-bold mb-6 text-gradient">
+            <i class="fas fa-lightbulb mr-3 icon-glow-blue"></i>
+            Taught Topics
+          </h3>
+          <div class="flex flex-wrap gap-3">
+            <span class="px-4 py-2 bg-blue-50/80 text-blue-700 rounded-full text-sm border border-blue-200 backdrop-blur-md shadow-sm hover:shadow-blue-200/50 transition-all">UI/UX Design</span>
+            <span class="px-4 py-2 bg-purple-50/80 text-purple-700 rounded-full text-sm border border-purple-200 backdrop-blur-md shadow-sm hover:shadow-purple-200/50 transition-all">Frontend Development</span>
+            <span class="px-4 py-2 bg-green-50/80 text-green-700 rounded-full text-sm border border-green-200 backdrop-blur-md shadow-sm hover:shadow-green-200/50 transition-all">AI Tool Creation</span>
+            <span class="px-4 py-2 bg-yellow-50/80 text-yellow-700 rounded-full text-sm border border-yellow-200 backdrop-blur-md shadow-sm hover:shadow-yellow-200/50 transition-all">Software Project Building</span>
+            <span class="px-4 py-2 bg-pink-50/80 text-pink-700 rounded-full text-sm border border-pink-200 backdrop-blur-md shadow-sm hover:shadow-pink-200/50 transition-all">EdTech Innovation</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Enhanced Z3Connect Section with Glassmorphism -->
+  <section id="z3connect" class="py-20 px-6">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl md:text-5xl font-display font-bold text-center mb-16 text-gray-900">
+        <i class="fas fa-brain text-gradient mr-4 icon-glow-purple"></i>
+        Z3Connect – Building Smart Business Tools
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-8 mb-12">
+        <div class="glass-card-cyan rounded-2xl p-8 hover-lift backdrop-blur-lg shadow-neon-cyan">
+          <h3 class="text-2xl font-bold mb-6 text-gradient">
+            <i class="fas fa-rocket mr-3 icon-glow-cyan"></i>
+            Tools I've Built
+          </h3>
+          <ul class="space-y-3">
+            <li class="flex items-center text-gray-700">
+              <i class="fas fa-chart-line text-blue-600 mr-3 icon-glow-blue"></i>
+              <span>CRM, ERP & POA Systems for Businesses</span>
+            </li>
+            <li class="flex items-center text-gray-700">
+              <i class="fas fa-tachometer-alt text-purple-600 mr-3 icon-glow-purple"></i>
+              <span>Custom Dashboards & Management Tools</span>
+            </li>
+            <li class="flex items-center text-gray-700">
+              <i class="fas fa-video text-green-600 mr-3"></i>
+              <span>Z3 Reel Caption: Multilingual Video Translator with Lip-Sync</span>
+            </li>
+            <li class="flex items-center text-gray-700">
+              <i class="fas fa-project-diagram text-yellow-600 mr-3"></i>
+              <span>AI Flow Plan Designer with Editable Outputs</span>
+            </li>
+            <li class="flex items-center text-gray-700">
+              <i class="fas fa-tools text-pink-600 mr-3"></i>
+              <span>B2B Tools for Retail, Logistics, and Creators</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="glass-card-purple rounded-2xl p-8 hover-lift backdrop-blur-lg shadow-neon-purple">
+          <h3 class="text-2xl font-bold mb-6 text-gradient">
+            <i class="fas fa-code mr-3 icon-glow-purple"></i>
+            Technologies Used
+          </h3>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="flex items-center text-gray-700 p-2 rounded-lg bg-white/20 backdrop-blur-lg border border-white/30 shadow-sm hover:shadow-yellow-200/30 transition-all">
+              <i class="fab fa-python text-yellow-600 mr-3"></i>
+              <span>Python</span>
+            </div>
+            <div class="flex items-center text-gray-700 p-2 rounded-lg bg-white/20 backdrop-blur-lg border border-white/30 shadow-sm hover:shadow-green-200/30 transition-all">
+              <i class="fas fa-flask text-green-600 mr-3"></i>
+              <span>Flask</span>
+            </div>
+            <div class="flex items-center text-gray-700 p-2 rounded-lg bg-white/20 backdrop-blur-lg border border-white/30 shadow-sm hover:shadow-blue-200/30 transition-all">
+              <i class="fab fa-react text-blue-600 mr-3 icon-glow-blue"></i>
+              <span>React</span>
+            </div>
+            <div class="flex items-center text-gray-700 p-2 rounded-lg bg-white/20 backdrop-blur-lg border border-white/30 shadow-sm hover:shadow-orange-200/30 transition-all">
+              <i class="fas fa-fire text-orange-600 mr-3"></i>
+              <span>Firebase</span>
+            </div>
+            <div class="flex items-center text-gray-700 p-2 rounded-lg bg-white/20 backdrop-blur-lg border border-white/30 shadow-sm hover:shadow-purple-200/30 transition-all">
+              <i class="fas fa-palette text-purple-600 mr-3 icon-glow-purple"></i>
+              <span>Tailwind</span>
+            </div>
+            <div class="flex items-center text-gray-700 p-2 rounded-lg bg-white/20 backdrop-blur-lg border border-white/30 shadow-sm hover:shadow-gray-200/30 transition-all">
+              <i class="fas fa-database text-gray-600 mr-3"></i>
+              <span>SQLite</span>
+            </div>
+            <div class="flex items-center text-gray-700 p-2 rounded-lg bg-white/20 backdrop-blur-lg border border-white/30 shadow-sm hover:shadow-red-200/30 transition-all">
+              <i class="fas fa-microphone text-red-600 mr-3"></i>
+              <span>Whisper</span>
+            </div>
+            <div class="flex items-center text-gray-700 p-2 rounded-lg bg-white/20 backdrop-blur-lg border border-white/30 shadow-sm hover:shadow-indigo-200/30 transition-all">
+              <i class="fas fa-gem text-indigo-600 mr-3 icon-glow-purple"></i>
+              <span>Gemini API</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Enhanced Projects Section with Glassmorphism -->
+  <section id="projects" class="py-20 px-6">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl md:text-5xl font-display font-bold text-center mb-16 text-gray-900">
+        <i class="fas fa-flask text-gradient mr-4 icon-glow-blue"></i>
+        Projects at a Glance
+      </h2>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Z3 Reel Caption -->
+        <div class="project-card rounded-2xl p-6 hover-lift backdrop-blur-lg shadow-glass">
+          <div class="text-3xl mb-4 icon-glow-blue">🎬</div>
+          <h3 class="text-xl font-bold mb-3 text-gray-900">Z3 Reel Caption</h3>
+          <p class="text-gray-600 mb-4">AI captioning, voice cloning & multilingual dubbing</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs px-2 py-1 bg-blue-50/80 text-blue-700 rounded border border-blue-200 backdrop-blur-sm shadow-sm hover:shadow-blue-200/50 transition-all">AI</span>
+            <span class="text-xs px-2 py-1 bg-purple-50/80 text-purple-700 rounded border border-purple-200 backdrop-blur-sm shadow-sm hover:shadow-purple-200/50 transition-all">Video</span>
+            <span class="text-xs px-2 py-1 bg-green-50/80 text-green-700 rounded border border-green-200 backdrop-blur-sm shadow-sm hover:shadow-green-200/50 transition-all">ML</span>
+          </div>
+        </div>
+        
+        <!-- Smart CRM -->
+        <div class="project-card rounded-2xl p-6 hover-lift backdrop-blur-lg shadow-glass">
+          <div class="text-3xl mb-4 icon-glow-purple">📊</div>
+          <h3 class="text-xl font-bold mb-3 text-gray-900">Smart CRM System</h3>
+          <p class="text-gray-600 mb-4">Custom role-based dashboards & customer tracking</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs px-2 py-1 bg-blue-50/80 text-blue-700 rounded border border-blue-200 backdrop-blur-sm shadow-sm hover:shadow-blue-200/50 transition-all">CRM</span>
+            <span class="text-xs px-2 py-1 bg-purple-50/80 text-purple-700 rounded border border-purple-200 backdrop-blur-sm shadow-sm hover:shadow-purple-200/50 transition-all">Dashboard</span>
+            <span class="text-xs px-2 py-1 bg-yellow-50/80 text-yellow-700 rounded border border-yellow-200 backdrop-blur-sm shadow-sm hover:shadow-yellow-200/50 transition-all">B2B</span>
+          </div>
+        </div>
+        
+        <!-- ZGPT Tutor -->
+        <div class="project-card rounded-2xl p-6 hover-lift backdrop-blur-lg shadow-glass">
+          <div class="text-3xl mb-4 icon-glow-cyan">🤖</div>
+          <h3 class="text-xl font-bold mb-3 text-gray-900">ZGPT Tutor</h3>
+          <p class="text-gray-600 mb-4">Interactive AI educator for Z2Learn</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs px-2 py-1 bg-blue-50/80 text-blue-700 rounded border border-blue-200 backdrop-blur-sm shadow-sm hover:shadow-blue-200/50 transition-all">AI</span>
+            <span class="text-xs px-2 py-1 bg-green-50/80 text-green-700 rounded border border-green-200 backdrop-blur-sm shadow-sm hover:shadow-green-200/50 transition-all">Education</span>
+            <span class="text-xs px-2 py-1 bg-purple-50/80 text-purple-700 rounded border border-purple-200 backdrop-blur-sm shadow-sm hover:shadow-purple-200/50 transition-all">GPT</span>
+          </div>
+        </div>
+        
+        <!-- Z2Learn CMS -->
+        <div class="project-card rounded-2xl p-6 hover-lift backdrop-blur-lg shadow-glass">
+          <div class="text-3xl mb-4 icon-glow-blue">📚</div>
+          <h3 class="text-xl font-bold mb-3 text-gray-900">Z2Learn CMS</h3>
+          <p class="text-gray-600 mb-4">Dynamic learning content manager with roadmaps</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs px-2 py-1 bg-blue-50/80 text-blue-700 rounded border border-blue-200 backdrop-blur-sm shadow-sm hover:shadow-blue-200/50 transition-all">CMS</span>
+            <span class="text-xs px-2 py-1 bg-green-50/80 text-green-700 rounded border border-green-200 backdrop-blur-sm shadow-sm hover:shadow-green-200/50 transition-all">EdTech</span>
+            <span class="text-xs px-2 py-1 bg-yellow-50/80 text-yellow-700 rounded border border-yellow-200 backdrop-blur-sm shadow-sm hover:shadow-yellow-200/50 transition-all">Content</span>
+          </div>
+        </div>
+        
+        <!-- 2D Flow Planner -->
+        <div class="project-card rounded-2xl p-6 hover-lift backdrop-blur-lg shadow-glass">
+          <div class="text-3xl mb-4 icon-glow-purple">🏗️</div>
+          <h3 class="text-xl font-bold mb-3 text-gray-900">2D Flow Planner</h3>
+          <p class="text-gray-600 mb-4">AI-assisted layout design tool for architecture & interior</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs px-2 py-1 bg-blue-50/80 text-blue-700 rounded border border-blue-200 backdrop-blur-sm shadow-sm hover:shadow-blue-200/50 transition-all">AI</span>
+            <span class="text-xs px-2 py-1 bg-purple-50/80 text-purple-700 rounded border border-purple-200 backdrop-blur-sm shadow-sm hover:shadow-purple-200/50 transition-all">Design</span>
+            <span class="text-xs px-2 py-1 bg-green-50/80 text-green-700 rounded border border-green-200 backdrop-blur-sm shadow-sm hover:shadow-green-200/50 transition-all">Architecture</span>
+          </div>
+        </div>
+        
+        <!-- Z1Renders -->
+        <div class="project-card rounded-2xl p-6 hover-lift backdrop-blur-lg shadow-glass">
+          <div class="text-3xl mb-4 icon-glow-cyan">🎮</div>
+          <h3 class="text-xl font-bold mb-3 text-gray-900">Z1Renders</h3>
+          <p class="text-gray-600 mb-4">3D/AR/VR creative lab for games and experiences</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs px-2 py-1 bg-blue-50/80 text-blue-700 rounded border border-blue-200 backdrop-blur-sm shadow-sm hover:shadow-blue-200/50 transition-all">3D</span>
+            <span class="text-xs px-2 py-1 bg-purple-50/80 text-purple-700 rounded border border-purple-200 backdrop-blur-sm shadow-sm hover:shadow-purple-200/50 transition-all">VR/AR</span>
+            <span class="text-xs px-2 py-1 bg-pink-50/80 text-pink-700 rounded border border-pink-200 backdrop-blur-sm shadow-sm hover:shadow-pink-200/50 transition-all">Gaming</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Enhanced Skills Section with Glassmorphism -->
+  <section class="py-20 px-6">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl md:text-5xl font-display font-bold text-center mb-16 text-gray-900">
+        <i class="fas fa-cogs text-gradient mr-4 icon-glow-blue"></i>
+        Skills & Expertise
+      </h2>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="glass-card-blue rounded-2xl p-6 text-center hover-lift backdrop-blur-lg shadow-neon-blue">
+          <i class="fas fa-code text-4xl text-blue-600 mb-4 icon-glow-blue"></i>
+          <h3 class="text-xl font-bold mb-3 text-gray-900">Languages & Tools</h3>
+          <p class="text-gray-600 text-sm">Python, JS, HTML5, TailwindCSS, Firebase, Figma</p>
+        </div>
+        
+        <div class="glass-card-purple rounded-2xl p-6 text-center hover-lift backdrop-blur-lg shadow-neon-purple">
+          <i class="fas fa-layer-group text-4xl text-purple-600 mb-4 icon-glow-purple"></i>
+          <h3 class="text-xl font-bold mb-3 text-gray-900">Frameworks</h3>
+          <p class="text-gray-600 text-sm">Flask, React, Unity, Unreal Engine</p>
+        </div>
+        
+        <div class="glass-card-cyan rounded-2xl p-6 text-center hover-lift backdrop-blur-lg shadow-neon-cyan">
+          <i class="fas fa-robot text-4xl text-green-600 mb-4 icon-glow-cyan"></i>
+          <h3 class="text-xl font-bold mb-3 text-gray-900">AI/ML Tools</h3>
+          <p class="text-gray-600 text-sm">Gemini, Whisper, Coqui XTTS</p>
+        </div>
+        
+        <div class="glass-card rounded-2xl p-6 text-center hover-lift backdrop-blur-lg shadow-glass">
+          <i class="fas fa-building text-4xl text-yellow-600 mb-4"></i>
+          <h3 class="text-xl font-bold mb-3 text-gray-900">System Types</h3>
+          <p class="text-gray-600 text-sm">CRM, ERP, AI Tutors, Flow Designers, B2B Dashboards</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Enhanced Contact Section with Glassmorphism -->
+  <section id="contact" class="py-20 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-4xl md:text-5xl font-display font-bold mb-8 text-gray-900">
+        <i class="fas fa-paper-plane text-gradient mr-4 icon-glow-blue"></i>
+        Let's Build Something Powerful
+      </h2>
+      
+      <p class="text-xl text-gray-600 mb-12">Ready to collaborate on your next project?</p>
+      
+      <div class="grid md:grid-cols-3 gap-8 mb-12">
+        <a href="mailto:ahmad@z2learn.com" class="contact-card glass-card-blue rounded-2xl p-6 hover-lift group text-decoration-none backdrop-blur-lg shadow-neon-blue">
+          <i class="fas fa-envelope text-3xl text-blue-600 mb-4 group-hover:scale-110 transition-transform icon-glow-blue"></i>
+          <h3 class="text-lg font-bold mb-2 text-gray-900">Email</h3>
+          <p class="text-gray-600">ahmad@z2learn.com</p>
+        </a>
+        
+        <a href="https://linkedin.com/in/ahmadshafiq" class="contact-card glass-card-purple rounded-2xl p-6 hover-lift group text-decoration-none backdrop-blur-lg shadow-neon-purple">
+          <i class="fab fa-linkedin text-3xl text-blue-600 mb-4 group-hover:scale-110 transition-transform icon-glow-blue"></i>
+          <h3 class="text-lg font-bold mb-2 text-gray-900">LinkedIn</h3>
+          <p class="text-gray-600">linkedin.com/in/ahmadshafiq</p>
+        </a>
+        
+        <a href="https://www.ahmadshafiq.dev" class="contact-card glass-card-cyan rounded-2xl p-6 hover-lift group text-decoration-none backdrop-blur-lg shadow-neon-cyan">
+          <i class="fas fa-globe text-3xl text-blue-600 mb-4 group-hover:scale-110 transition-transform icon-glow-blue"></i>
+          <h3 class="text-lg font-bold mb-2 text-gray-900">Website</h3>
+          <p class="text-gray-600">www.ahmadshafiq.dev</p>
+        </a>
+      </div>
+      
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <button class="cta-primary px-8 py-4 rounded-full font-semibold text-white shadow-neon-blue">
+          <i class="fas fa-calendar mr-2"></i>
+          Schedule a Meeting
+        </button>
+        <button class="cta-secondary px-8 py-4 rounded-full font-semibold backdrop-blur-md shadow-glass">
+          <i class="fas fa-download mr-2"></i>
+          Download Resume
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Enhanced Footer with Glassmorphism -->
+  <footer class="border-t border-gray-200/30 py-8 px-6 backdrop-blur-sm">
+    <div class="max-w-6xl mx-auto text-center">
+      <p class="text-gray-500">© 2024 Ahmad Shafiq. Building the future, one project at a time.</p>
+    </div>
+  </footer>
+
+  <!-- Enhanced Side Navigation with Glow -->
+  <div class="fixed right-8 top-1/2 transform -translate-y-1/2 z-40 hidden lg:flex flex-col space-y-4">
+    <div class="nav-dot active shadow-neon-blue" data-section="hero"></div>
+    <div class="nav-dot shadow-sm" data-section="about"></div>
+    <div class="nav-dot shadow-sm" data-section="z2learn"></div>
+    <div class="nav-dot shadow-sm" data-section="z3connect"></div>
+    <div class="nav-dot shadow-sm" data-section="projects"></div>
+    <div class="nav-dot shadow-sm" data-section="contact"></div>
+  </div>
+
+  <!-- Enhanced Script with Animation Improvements -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+  // Smooth scrolling for navigation
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    });
+  });
+
+  // Enhanced mobile menu functionality
+  const mobileMenuButton = document.querySelector('.md\\:hidden');
+  const mobileMenu = document.createElement('div');
+  mobileMenu.className = 'fixed inset-0 z-50 flex flex-col items-center justify-center bg-white/95 backdrop-blur-xl transform transition-all duration-300 translate-x-full';
+  mobileMenu.innerHTML = `
+    <div class="absolute top-4 right-6">
+      <button class="p-2 text-gray-800 bg-white/50 rounded-lg backdrop-blur-lg border border-white/30 shadow-glass">
+        <i class="fas fa-times text-xl"></i>
+      </button>
+    </div>
+    <div class="flex flex-col space-y-6 text-center">
+      <a href="#hero" class="text-xl text-gray-800 hover:text-blue-600 transition-all py-2 px-6 rounded-full hover:bg-blue-50/50">Home</a>
+      <a href="#about" class="text-xl text-gray-800 hover:text-blue-600 transition-all py-2 px-6 rounded-full hover:bg-blue-50/50">About</a>
+      <a href="#z2learn" class="text-xl text-gray-800 hover:text-blue-600 transition-all py-2 px-6 rounded-full hover:bg-blue-50/50">Z2Learn</a>
+      <a href="#z3connect" class="text-xl text-gray-800 hover:text-blue-600 transition-all py-2 px-6 rounded-full hover:bg-blue-50/50">Z3Connect</a>
+      <a href="#projects" class="text-xl text-gray-800 hover:text-blue-600 transition-all py-2 px-6 rounded-full hover:bg-blue-50/50">Projects</a>
+      <a href="#contact" class="text-xl text-gray-800 hover:text-blue-600 transition-all py-2 px-6 rounded-full hover:bg-blue-50/50">Contact</a>
+    </div>
+  `;
+  document.body.appendChild(mobileMenu);
+
+  mobileMenuButton.addEventListener('click', () => {
+    mobileMenu.classList.toggle('translate-x-full');
+    mobileMenu.classList.toggle('translate-x-0');
+    document.body.classList.toggle('overflow-hidden');
+  });
+
+  mobileMenu.querySelector('button').addEventListener('click', () => {
+    mobileMenu.classList.add('translate-x-full');
+    mobileMenu.classList.remove('translate-x-0');
+    document.body.classList.remove('overflow-hidden');
+  });
+
+  mobileMenu.querySelectorAll('a').forEach(anchor => {
+    anchor.addEventListener('click', () => {
+      mobileMenu.classList.add('translate-x-full');
+      mobileMenu.classList.remove('translate-x-0');
+      document.body.classList.remove('overflow-hidden');
+    });
+  });
+
+  // Enhanced navigation dots functionality
+  const navDots = document.querySelectorAll('.nav-dot');
+  const sections = document.querySelectorAll('section[id]');
+
+  navDots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      const targetSection = dot.getAttribute('data-section');
+      const target = document.getElementById(targetSection);
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    });
+  });
+
+  // Enhanced active nav dot update with glow effect
+  const updateActiveNavDot = () => {
+    let current = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight;
+      if (window.pageYOffset >= (sectionTop - 200)) {
+        current = section.getAttribute('id');
+      }
+    });
+
+    navDots.forEach(dot => {
+      dot.classList.remove('active');
+      dot.style.boxShadow = '0 0 0 rgba(59, 130, 246, 0)';
+      
+      if (dot.getAttribute('data-section') === current) {
+        dot.classList.add('active');
+        dot.style.boxShadow = '0 0 15px rgba(59, 130, 246, 0.6)';
+      }
+    });
+  };
+
+  window.addEventListener('scroll', updateActiveNavDot);
+
+  // Enhanced intersection observer for animations with staggered reveal
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        // Add a slight delay based on the element's position in the section
+        setTimeout(() => {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }, index * 100); // Staggered animation delay
+      }
+    });
+  }, observerOptions);
+
+  // Observe all sections for animations
+  sections.forEach(section => {
+    observer.observe(section);
+    
+    // Also observe all cards within each section for staggered animation
+    const cards = section.querySelectorAll('.glass-card, .glass-card-blue, .glass-card-purple, .glass-card-cyan, .project-card');
+    cards.forEach((card, index) => {
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(30px)';
+      card.style.transition = 'all 0.6s cubic-bezier(0.17, 0.67, 0.3, 0.96)';
+      card.style.transitionDelay = `${index * 0.1}s`;
+      
+      observer.observe(card);
+    });
+  });
+
+  // Enhanced floating particles with glowing effects
+  const generateParticles = () => {
+    const container = document.body;
+    for (let i = 0; i < 20; i++) {
+      const particle = document.createElement('div');
+      particle.className = 'particle';
+      
+      const size = Math.random() * 4 + 1;
+      particle.style.width = `${size}px`;
+      particle.style.height = `${size}px`;
+      particle.style.left = `${Math.random() * 100}%`;
+      particle.style.top = `${Math.random() * 100}%`;
+      particle.style.animationDelay = `${Math.random() * 8}s`;
+      particle.style.animationDuration = `${Math.random() * 4 + 6}s`;
+      
+      // Add glow effect to particles
+      const r = Math.floor(Math.random() * 100) + 100; // 100-200 range for more blues/purples
+      const g = Math.floor(Math.random() * 100) + 100;
+      const b = Math.floor(Math.random() * 255); // Full range for blue
+      const a = Math.random() * 0.3 + 0.1; // 0.1-0.4 for subtle appearance
+      
+      particle.style.backgroundColor = `rgba(${r}, ${g}, ${b}, ${a})`;
+      particle.style.boxShadow = `0 0 ${size * 3}px rgba(${r}, ${g}, ${b}, ${a * 2})`;
+      
+      container.appendChild(particle);
+    }
+  };
+
+  generateParticles();
+
+  // Enhanced interaction effects for cards
+  const glassCards = document.querySelectorAll('.glass-card, .glass-card-blue, .glass-card-purple, .glass-card-cyan, .project-card');
+  
+  glassCards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      // Add extra glow effect on hover
+      card.style.boxShadow = card.className.includes('blue') ? '0 10px 30px rgba(0, 0, 0, 0.1), 0 0 30px rgba(59, 130, 246, 0.5)' : 
+                           card.className.includes('purple') ? '0 10px 30px rgba(0, 0, 0, 0.1), 0 0 30px rgba(139, 92, 246, 0.5)' :
+                           card.className.includes('cyan') ? '0 10px 30px rgba(0, 0, 0, 0.1), 0 0 30px rgba(6, 182, 212, 0.5)' :
+                           '0 10px 30px rgba(0, 0, 0, 0.1), 0 0 20px rgba(59, 130, 246, 0.3)';
+    });
+    
+    card.addEventListener('mouseleave', () => {
+      // Restore original shadow
+      card.style.boxShadow = '';
+    });
+  });
+
+  // Cursor glow effect following mouse
+  const createGlowingCursor = () => {
+    const cursor = document.createElement('div');
+    cursor.className = 'fixed w-10 h-10 rounded-full pointer-events-none z-50 opacity-0 transition-opacity duration-300';
+    cursor.style.background = 'radial-gradient(circle, rgba(59, 130, 246, 0.3) 0%, rgba(59, 130, 246, 0) 70%)';
+    cursor.style.transform = 'translate(-50%, -50%)';
+    document.body.appendChild(cursor);
+    
+    document.addEventListener('mousemove', (e) => {
+      cursor.style.left = `${e.clientX}px`;
+      cursor.style.top = `${e.clientY}px`;
+      cursor.style.opacity = '1';
+      
+      // Detect if mouse is over interactive elements to change glow color
+      const element = document.elementFromPoint(e.clientX, e.clientY);
+      if (element) {
+        if (element.closest('.glass-card-blue') || element.closest('.icon-glow-blue')) {
+          cursor.style.background = 'radial-gradient(circle, rgba(59, 130, 246, 0.3) 0%, rgba(59, 130, 246, 0) 70%)';
+          cursor.style.width = '80px';
+          cursor.style.height = '80px';
+        } else if (element.closest('.glass-card-purple') || element.closest('.icon-glow-purple')) {
+          cursor.style.background = 'radial-gradient(circle, rgba(139, 92, 246, 0.3) 0%, rgba(139, 92, 246, 0) 70%)';
+          cursor.style.width = '80px';
+          cursor.style.height = '80px';
+        } else if (element.closest('.glass-card-cyan') || element.closest('.icon-glow-cyan')) {
+          cursor.style.background = 'radial-gradient(circle, rgba(6, 182, 212, 0.3) 0%, rgba(6, 182, 212, 0) 70%)';
+          cursor.style.width = '80px';
+          cursor.style.height = '80px';
+        } else if (element.closest('a') || element.closest('button')) {
+          cursor.style.background = 'radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 70%)';
+          cursor.style.width = '60px';
+          cursor.style.height = '60px';
+        } else {
+          cursor.style.background = 'radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, rgba(59, 130, 246, 0) 70%)';
+          cursor.style.width = '40px';
+          cursor.style.height = '40px';
+        }
+      }
+    });
+    
+    // Hide cursor glow when mouse leaves window
+    document.addEventListener('mouseleave', () => {
+      cursor.style.opacity = '0';
+    });
+  };
+  
+  // Only create glowing cursor for non-touch devices
+  if (!('ontouchstart' in window)) {
+    createGlowingCursor();
+  }
+
+  // Add typing effect completion
+  setTimeout(() => {
+    const typewriter = document.querySelector('.typewriter');
+    if (typewriter) {
+      typewriter.style.borderRight = 'none';
+    }
+  }, 6000);
+  
+  // Parallax effect for background elements
+  window.addEventListener('mousemove', (e) => {
+    const mouseX = e.clientX / window.innerWidth;
+    const mouseY = e.clientY / window.innerHeight;
+    
+    const orbs = document.querySelectorAll('.bg-gradient-to-br.rounded-full');
+    orbs.forEach(orb => {
+      const offsetX = (mouseX - 0.5) * 20;
+      const offsetY = (mouseY - 0.5) * 20;
+      orb.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
+    });
+  });
+  
+  // Preload animations on page load
+  window.addEventListener('load', () => {
+    document.body.classList.add('loaded');
+    
+    // Trigger initial animations
+    const heroElements = document.querySelectorAll('#hero *[class*="opacity-0"]');
+    heroElements.forEach((el, index) => {
+      setTimeout(() => {
+        el.classList.add('animate-reveal');
+      }, index * 200);
+    });
+  });
+});
+  </script>
+</body>
+</html>
+
+    
